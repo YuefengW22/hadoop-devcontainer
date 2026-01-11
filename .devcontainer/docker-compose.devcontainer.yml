@@ -1,0 +1,8 @@
+services:
+  client:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ../conf:/etc/hadoop:ro
+      - ..:/workspaces/hadoop-devcontainer:cached

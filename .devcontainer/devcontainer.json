@@ -1,0 +1,24 @@
+{
+  "name": "Hadoop Dev",
+  "dockerComposeFile": [
+    "docker-compose.yml",
+    "docker-compose.devcontainer.yml"
+  ],
+  "service": "client",
+  "workspaceFolder": "/workspaces/hadoop-devcontainer",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/hadoop-devcontainer,type=bind,consistency=cached",
+  "remoteUser": "client",
+  "containerUser": "client",
+  "userEnvProbe": "none",
+  "updateRemoteUserUID": false,
+  "shutdownAction": "stopCompose",
+  "overrideCommand": false,
+  "runServices": ["nn", "rm", "w1", "w2", "client"],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}

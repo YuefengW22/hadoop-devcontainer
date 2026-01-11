@@ -198,6 +198,21 @@ publish/
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml
+
+# Devcontainer/Docker local overrides
+docker-compose.override.yml
+.devcontainer/.env
+*.pid
+*.log
+*.tmp
+.DS_Store
+
+# Hadoop local state (if mounted to host)
+data/
+tmp/
+logs/
+hdfs-data/
+yarn-logs/
 # Note: Comment the next line if you want to checkin your web deploy settings,
 # but database connection strings (with potential passwords) will be unencrypted
 *.pubxml
